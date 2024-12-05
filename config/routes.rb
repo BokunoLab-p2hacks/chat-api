@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show create]
   
-  resources :messages, only: %i[index]
+  resources :messages, only: %i[index create]
 end
