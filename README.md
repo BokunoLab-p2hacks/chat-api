@@ -1,24 +1,10 @@
-# README
+## 起動方法
+1. `docker compose build`
+2. `docker compose run --rm api rails db:create`
+3. `docker compose run --rm api rails db:migrate`
+4. http://localhost:25021/up へアクセス -> 緑色のページが表示されたらおk！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## API リファレンス
+Swaggerをまだ用意できていないので、以下をリファレンスとしてください。
+- [users_spec.rb](https://github.com/BokunoLab-p2hacks/chat-api/blob/main/spec/requests/users_spec.rb)
+- [messages_spec.rb](https://github.com/BokunoLab-p2hacks/chat-api/blob/main/spec/requests/messages_spec.rb)
