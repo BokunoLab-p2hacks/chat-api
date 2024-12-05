@@ -2,7 +2,8 @@
 1. `docker compose build`
 2. `docker compose run --rm api rails db:create`
 3. `docker compose run --rm api rails db:migrate`
-4. http://localhost:25021/up へアクセス -> 緑色のページが表示されたらおk！
+4. docker compose up -d
+5. http://localhost:25021/up へアクセス -> 緑色のページが表示されたらおk！
 
 ## API リファレンス
 Swaggerをまだ用意できていないので、以下をリファレンスとしてください。
