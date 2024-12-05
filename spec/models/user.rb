@@ -27,4 +27,14 @@ RSpec.describe User, type: :model do
       expect(user.id).to be_present
     end
   end
+
+  describe "methods" do
+    before do
+      @user = create(:user)
+    end
+
+    it "user#info returns {id, name, email}" do
+      expect(@user.info).to eq({ id: @user.id, name: @user.name, email: @user.email })
+    end
+  end
 end
