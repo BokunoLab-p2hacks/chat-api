@@ -40,4 +40,14 @@ RSpec.describe Message, type: :model do
       expect(message.user).to eq(user)
     end
   end
+
+  describe "methods" do
+    before do
+      @message = create(:message)
+    end
+
+    it "message#info returns {userId, content}" do
+      expect(@message.info).to eq({ userId: @message.user_id, content: @message.content })
+    end
+  end
 end
