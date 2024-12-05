@@ -7,6 +7,9 @@ RSpec.describe User, type: :model do
     end
 
     it "is valid with valid attributes" do
+      
+      binding.pry
+      
       expect(@user).to be_valid
     end
 
