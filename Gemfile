@@ -52,4 +52,6 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2.0'
   gem 'timecop', '~> 0.9.8'
   gem "spring"
+
+  gem 'rspec-openapi', '~> 0.18.3'
 end
