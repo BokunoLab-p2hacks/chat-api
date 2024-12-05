@@ -42,4 +42,24 @@ RSpec.describe "Users", type: :request do
       expect(response).to have_http_status(422)
     end
   end
+
+  describe "GET /users/:id" do
+    before do
+      @user = create(:user)
+      get "/users/#{@user.id}"
+    end
+
+    it "returns a 200 if the response succeeded" do
+      expect(response).to have_http_status(200)
+    end
+
+    it "returns the user#info" do
+      expect(response_body).to eq(@user.info.stringify_keys)
+    end
+
+    it "returns a 404 if the user is not found" do
+      get "/users/-1"
+      expect(response).to have_http_status(404)
+    end
+  end
 end

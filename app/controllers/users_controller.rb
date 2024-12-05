@@ -4,6 +4,16 @@ class UsersController < ApplicationController
     render json: @users.map(&:info)
   end
 
+  def show
+    @user = User.find_by(id: params[:id])
+
+    if @user
+      render json: @user.info
+    else
+      render json: { error: "User not found" }, status: :not_found
+    end
+  end
+
   def create
     @user = User.new(params_create)
     if @user.save
