@@ -19,6 +19,12 @@ RSpec.describe User, type: :model do
       @user.email = nil
       expect(@user).to_not be_valid
     end
+
+    it "is not valid with a duplicate email" do
+      user0 = create(:user)
+      user1 = build(:user, email: user0.email)
+      expect(user1).to_not be_valid
+    end
   end
 
   describe "uuid" do

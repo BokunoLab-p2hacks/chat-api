@@ -3,7 +3,7 @@ class User < ApplicationRecord
   
   with_options presence: true do
     validates :name
-    validates :email
+    validates :email, uniqueness: true
   end
 
   def info
