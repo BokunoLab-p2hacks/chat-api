@@ -49,7 +49,7 @@ group :development, :test do
   gem "spring"
   gem 'rspec-rails', '~> 7.1'
   gem 'spring-commands-rspec'
-  gem 'factory_bot_rails', '~> 6.2.0'
+  gem 'factory_bot_rails', '~> 6.4.4'
   gem 'timecop', '~> 0.9.8'
   gem "spring"
 
