@@ -53,5 +53,5 @@ group :development, :test do
   gem 'timecop', '~> 0.9.8'
   gem "spring"
 
-  gem 'rspec-openapi', '~> 0.18.3'
+  gem 'rspec-openapi', '~> 0.18.4'
 end
